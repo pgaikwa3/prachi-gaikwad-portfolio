@@ -44,6 +44,7 @@ All colors MUST be HSL.
     
     --shadow-elegant: 0 10px 40px -10px hsl(262 70% 58% / 0.25);
     --shadow-soft: 0 4px 20px -4px hsl(240 10% 15% / 0.08);
+    --shadow-glow: 0 0 60px hsl(262 70% 58% / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -89,5 +90,42 @@ All colors MUST be HSL.
 
   .skewed-frame {
     clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .gradient-border {
+    position: relative;
+    background: var(--gradient-primary);
+    padding: 2px;
+    border-radius: var(--radius);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: hsl(var(--background));
+    border-radius: calc(var(--radius) - 2px);
+    z-index: -1;
   }
 }
