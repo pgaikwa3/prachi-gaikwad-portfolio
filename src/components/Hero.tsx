@@ -1,10 +1,8 @@
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePicture from "@/assets/profile-picture.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center pt-16">
+  return <section id="home" className="min-h-screen flex items-center pt-16">
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -28,18 +26,12 @@ const Hero = () => {
               complex systems.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 shadow-elegant"
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-              >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-elegant" onClick={() => document.querySelector("#contact")?.scrollIntoView({
+              behavior: "smooth"
+            })}>
                 Get In Touch <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 <Download className="mr-2 h-5 w-5" /> Download CV
               </Button>
             </div>
@@ -56,11 +48,7 @@ const Hero = () => {
               <div className="relative overflow-hidden rounded-3xl shadow-elegant hover-lift">
                 <div className="aspect-square max-w-md mx-auto skewed-frame bg-gradient-to-br from-primary to-secondary p-1">
                   <div className="w-full h-full bg-card rounded-3xl overflow-hidden">
-                    <img
-                      src={profilePicture}
-                      alt="Prachi Gaikwad - Software Engineer"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={profilePicture} alt="Prachi Gaikwad - Software Engineer" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -72,8 +60,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
