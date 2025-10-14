@@ -1,4 +1,4 @@
-import { Code2, Database, Server, Wrench, Lightbulb, GitBranch } from "lucide-react";
+import { Code2, Database, Server, GitBranch, BarChart3 } from "lucide-react";
 import { Card } from "./ui/card";
 
 const Skills = () => {
@@ -28,15 +28,9 @@ const Skills = () => {
       color: "from-primary/80 to-secondary",
     },
     {
-      category: "System & Workflow",
-      icon: Wrench,
-      skills: ["Troubleshooting", "System Optimization", "Workflow Automation"],
-      color: "from-secondary/80 to-primary",
-    },
-    {
-      category: "Core Competencies",
-      icon: Lightbulb,
-      skills: ["Problem Solving", "Data Analytics", "Technical Consulting"],
+      category: "Data Analytics",
+      icon: BarChart3,
+      skills: ["Tableau", "PowerBI", "Excel", "ETL"],
       color: "from-accent/80 to-secondary/80",
     },
   ];
@@ -50,7 +44,7 @@ const Skills = () => {
               Technical <span className="text-gradient">Skills</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Expertise across the full stack and modern development practices
+              Full-stack development and data analytics expertise
             </p>
           </div>
 

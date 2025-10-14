@@ -14,7 +14,7 @@ const Projects = () => {
       technologies: ["Tableau", "Data Visualization", "Analytics"],
       image: projectTrends,
       liveLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/Airline_Review_Dashboard/Dashboard1",
-      githubLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/Airline_Review_Dashboard/Dashboard1",
+      githubLink: "https://github.com/PrachiGaikwad1/Tableau-Dashboards",
     },
     {
       title: "PowerBI Dashboards Collection",

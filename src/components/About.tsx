@@ -37,24 +37,6 @@ const About = () => {
             </p>
           </div>
 
-          <div className="mb-12 animate-fade-in">
-            <Card className="p-8 shadow-soft hover-lift border-0 bg-card">
-              <h3 className="text-2xl font-bold mb-4 text-primary">My Philosophy</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                I believe in writing clean, maintainable code and building applications that not
-                only meet technical requirements but also provide exceptional user experiences.
-                My approach combines strong technical fundamentals with a focus on practical,
-                real-world solutions.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Throughout my career, I've developed expertise in full-stack development, with a
-                particular focus on modern web technologies, database optimization, and cloud
-                infrastructure. I'm committed to continuous learning and staying current with
-                industry best practices.
-              </p>
-            </Card>
-          </div>
-
           <div>
             <h3 className="text-2xl font-bold mb-8 text-center">Education</h3>
             <div className="grid gap-6">
