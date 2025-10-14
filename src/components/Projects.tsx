@@ -8,13 +8,31 @@ import projectBackup from "@/assets/project-backup.jpg";
 const Projects = () => {
   const projects = [
     {
+      title: "Tableau Dashboard - Airline Review Analysis",
+      description:
+        "Interactive Tableau dashboard analyzing airline reviews with comprehensive visualizations for customer satisfaction metrics, service quality trends, and operational insights.",
+      technologies: ["Tableau", "Data Visualization", "Analytics"],
+      image: projectTrends,
+      liveLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/Airline_Review_Dashboard/Dashboard1",
+      githubLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/Airline_Review_Dashboard/Dashboard1",
+    },
+    {
+      title: "PowerBI Dashboards Collection",
+      description:
+        "Collection of professional PowerBI dashboards showcasing data analysis and business intelligence capabilities with interactive visualizations and actionable insights.",
+      technologies: ["PowerBI", "Business Intelligence", "Data Analysis"],
+      image: projectCommunication,
+      liveLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards",
+      githubLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards",
+    },
+    {
       title: "Identifying Trends in Programming Languages, Frameworks & Technologies",
       description:
         "Developed a comprehensive data analytics platform to identify and visualize trends in programming languages and frameworks. Features interactive dashboards, real-time data processing, and predictive analytics.",
       technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript", "PostgreSQL"],
       image: projectTrends,
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/PrachiGaikwad1/Data-Science-Projects/tree/main/identifying-trends-in-programming-languages-frameworks-and-technologies",
+      githubLink: "https://github.com/PrachiGaikwad1/Data-Science-Projects/tree/main/identifying-trends-in-programming-languages-frameworks-and-technologies",
     },
     {
       title: "Multithreaded Communication Application",
@@ -22,8 +40,8 @@ const Projects = () => {
         "Built a robust client-server communication system using Java multi-threading. Implements concurrent request handling, thread pooling, and efficient resource management for high-performance networking.",
       technologies: ["Java", "Multi-threading", "Socket Programming", "Concurrency"],
       image: projectCommunication,
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/multithreaded-communication-application",
+      githubLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/multithreaded-communication-application",
     },
     {
       title: "Backup System Application using Observer Pattern",
@@ -31,8 +49,8 @@ const Projects = () => {
         "Designed and implemented an automated backup system using the Observer design pattern. Features real-time file monitoring, incremental backups, and efficient synchronization with comprehensive logging.",
       technologies: ["Java", "Design Patterns", "Ant", "File I/O"],
       image: projectBackup,
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
+      githubLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
     },
   ];
 
