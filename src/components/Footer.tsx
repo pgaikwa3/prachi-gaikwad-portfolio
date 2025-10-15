@@ -7,8 +7,7 @@ const Footer = () => {
     <footer className="py-8 border-t border-border bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <p className="text-muted-foreground flex items-center justify-center gap-2">
-            Made with <Heart className="h-4 w-4 text-secondary fill-secondary" /> by{" "}
+          <p className="text-muted-foreground">
             <span className="font-semibold text-primary">Prachi Gaikwad</span>
           </p>
           <p className="text-sm text-muted-foreground mt-2">

@@ -94,7 +94,7 @@ const Hero = () => {
                 
                 {/* Profile Image Container */}
                 <div className="relative overflow-hidden rounded-3xl bg-card">
-                  <div className="aspect-square max-w-xs mx-auto skewed-frame bg-gradient-to-br from-primary to-secondary p-1.5">
+                  <div className="aspect-square max-w-[240px] mx-auto skewed-frame bg-gradient-to-br from-primary to-secondary p-1.5">
                     <div className="w-full h-full bg-card rounded-3xl overflow-hidden">
                       <img 
                         src={profilePicture} 

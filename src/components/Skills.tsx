@@ -6,32 +6,60 @@ const Skills = () => {
     {
       category: "Frontend Development",
       icon: Code2,
-      skills: ["React.js", "JavaScript", "HTML", "CSS", "Responsive Design"],
+      skills: [
+        { name: "React.js", logo: "⚛️" },
+        { name: "JavaScript", logo: "🟨" },
+        { name: "HTML", logo: "🔶" },
+        { name: "CSS", logo: "🎨" },
+        { name: "Responsive Design", logo: "📱" }
+      ],
       color: "from-primary to-primary/80",
     },
     {
       category: "Backend Development",
       icon: Server,
-      skills: ["Node.js", "Python", "Java", "REST APIs", "Flask"],
+      skills: [
+        { name: "Node.js", logo: "🟢" },
+        { name: "Python", logo: "🐍" },
+        { name: "Java", logo: "☕" },
+        { name: "REST APIs", logo: "🔌" },
+        { name: "Flask", logo: "🌶️" }
+      ],
       color: "from-secondary to-secondary/80",
+    },
+    {
+      category: "Data Analytics",
+      icon: BarChart3,
+      skills: [
+        { name: "Tableau", logo: "📊" },
+        { name: "PowerBI", logo: "📈" },
+        { name: "Excel", logo: "📗" },
+        { name: "ETL", logo: "🔄" }
+      ],
+      color: "from-accent/80 to-secondary/80",
     },
     {
       category: "Database Management",
       icon: Database,
-      skills: ["MySQL", "PostgreSQL", "SQL Optimization", "Data Modeling"],
+      skills: [
+        { name: "MySQL", logo: "🐬" },
+        { name: "PostgreSQL", logo: "🐘" },
+        { name: "SQL Optimization", logo: "⚡" },
+        { name: "Data Modeling", logo: "📐" }
+      ],
       color: "from-accent to-accent/80",
     },
     {
       category: "DevOps & Tools",
       icon: GitBranch,
-      skills: ["AWS", "CI/CD", "Jenkins", "Git", "Agile/Scrum"],
+      skills: [
+        { name: "AWS", logo: "☁️" },
+        { name: "CI/CD", logo: "🔁" },
+        { name: "Jenkins", logo: "🤖" },
+        { name: "Git", logo: "🔀" },
+        { name: "Agile/Scrum", logo: "🏃" }
+      ],
       color: "from-primary/80 to-secondary",
-    },
-    {
-      category: "Data Analytics",
-      icon: BarChart3,
-      skills: ["Tableau", "PowerBI", "Excel", "ETL"],
-      color: "from-accent/80 to-secondary/80",
     },
   ];
 
@@ -63,9 +91,10 @@ const Skills = () => {
                   {category.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-sm rounded-full bg-muted text-foreground/80 hover:bg-primary/10 hover:text-primary transition-colors"
+                      className="px-3 py-1 text-sm rounded-full bg-muted text-foreground/80 hover:bg-primary/10 hover:text-primary transition-colors flex items-center gap-1.5"
                     >
-                      {skill}
+                      <span className="text-base">{skill.logo}</span>
+                      {skill.name}
                     </span>
                   ))}
                 </div>
