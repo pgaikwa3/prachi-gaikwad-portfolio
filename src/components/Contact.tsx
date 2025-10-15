@@ -5,6 +5,20 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
+import { z } from "zod";
+
+// EmailJS Configuration
+const EMAILJS_PUBLIC_KEY = "oYS8vqsOGA_5VlTX0";
+const EMAILJS_SERVICE_ID = "service_3vejgmj";
+const EMAILJS_TEMPLATE_ID = "template_e5ulhm4";
+
+// Form validation schema
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
+});
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,11 +26,43 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    
+    // Validate form data
+    try {
+      contactSchema.parse(formData);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast.error(error.errors[0].message);
+        return;
+      }
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast.success("Message sent! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -149,8 +195,10 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-primary hover:bg-primary/90 shadow-elegant"
                   size="lg"
+                  disabled={isSubmitting}
                 >
-                  Send Message <Send className="ml-2 h-5 w-5" />
+                  {isSubmitting ? "Sending..." : "Send Message"} 
+                  <Send className="ml-2 h-5 w-5" />
                 </Button>
               </form>
             </Card>
