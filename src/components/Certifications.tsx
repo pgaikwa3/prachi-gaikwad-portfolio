@@ -1,8 +1,25 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, Shield, BookOpen, CheckCircle2 } from "lucide-react";
 import { Card } from "./ui/card";
-import { Button } from "./ui/button";
 
 const Certifications = () => {
+  const certifications = [
+    {
+      icon: Award,
+      title: "Data Analytics Certification",
+      description: "Professional certification in data analytics and visualization",
+    },
+    {
+      icon: Shield,
+      title: "Secure Code Warrior",
+      description: "Expertise in secure coding practices and application security",
+    },
+    {
+      icon: BookOpen,
+      title: "Research Paper Published",
+      description: "Contributing to academic research in computer science",
+    },
+  ];
+
   return (
     <section id="certifications" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -16,32 +33,27 @@ const Certifications = () => {
             </p>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <Card className="p-8 shadow-soft hover-lift border-0 bg-card animate-fade-in">
-              <div className="flex items-start gap-6">
-                <div className="inline-flex p-4 rounded-xl bg-gradient-to-br from-primary to-primary/80">
-                  <Award className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-3">
-                    Professional Certifications & Research
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    View my complete collection of professional certifications, academic achievements, 
-                    and published research papers demonstrating continuous learning and contributions 
-                    to the field of computer science.
+          <div className="grid md:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => (
+              <Card
+                key={index}
+                className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-secondary mb-4">
+                    <cert.icon className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {cert.description}
                   </p>
-                  <Button
-                    variant="outline"
-                    className="group border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                    onClick={() => window.open("https://github.com/PrachiGaikwad1", "_blank")}
-                  >
-                    View Certifications & Publications
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Button>
+                  <div className="mt-4">
+                    <CheckCircle2 className="h-5 w-5 text-secondary" />
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            ))}
           </div>
         </div>
       </div>

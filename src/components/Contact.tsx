@@ -73,20 +73,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "abc@gmail.com",
-      link: "mailto:abc@gmail.com",
+      value: "pgaikwa3@binghamton.edu",
+      link: "mailto:pgaikwa3@binghamton.edu",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect on LinkedIn",
-      link: "https://linkedin.com",
+      link: "https://www.linkedin.com/in/prachi-gaikwad/",
     },
     {
       icon: Github,
       label: "GitHub",
       value: "View GitHub Profile",
-      link: "https://github.com",
+      link: "https://github.com/PrachiGaikwad1/",
     },
   ];
 
