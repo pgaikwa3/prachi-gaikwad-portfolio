@@ -66,49 +66,48 @@ const Timeline = () => {
           </div>
 
           <div className="relative">
-            {/* Vertical center line */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20" />
+            {/* Vertical line - left on mobile, center on desktop */}
+            <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20" />
 
-            <div className="space-y-12">
-              {/* Interleave education and work items chronologically */}
+            <div className="space-y-8 md:space-y-12">
               {/* Masters */}
               <div className="relative animate-fade-in" style={{ animationDelay: '0ms' }}>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-right pr-8">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
-                      <div className="flex items-start gap-4 mb-4 justify-end">
-                        <div className="flex-1 text-right">
-                          <h3 className="text-xl font-bold mb-1">{educationItems[0].title}</h3>
-                          <p className="text-lg text-primary font-semibold mb-1">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="md:text-right md:pr-8 pl-16 md:pl-0">
+                    <Card className="p-4 md:p-6 shadow-soft hover-lift border-0 bg-card md:inline-block w-full">
+                      <div className="flex md:flex-row-reverse items-start gap-4 mb-4 md:justify-end">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon1 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div className="flex-1 md:text-right">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">{educationItems[0].title}</h3>
+                          <p className="text-base md:text-lg text-primary font-semibold mb-1">
                             {educationItems[0].institution}
                           </p>
                           <p className="text-sm text-muted-foreground">{educationItems[0].period}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
-                          <EducationIcon1 className="h-6 w-6 text-primary-foreground" />
-                        </div>
                       </div>
                     </Card>
                   </div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
               </div>
 
               {/* Graduate Student Assistant */}
               <div className="relative animate-fade-in" style={{ animationDelay: '100ms' }}>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div></div>
-                  <div className="pl-8">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="hidden md:block"></div>
+                  <div className="md:pl-8 pl-16">
+                    <Card className="p-4 md:p-6 shadow-soft hover-lift border-0 bg-card">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary flex-shrink-0">
                           <WorkIcon1 className="h-6 w-6 text-primary-foreground" />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-1">{workItems[0].title}</h3>
-                          <p className="text-lg text-primary font-semibold mb-1">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">{workItems[0].title}</h3>
+                          <p className="text-base md:text-lg text-primary font-semibold mb-1">
                             {workItems[0].institution}
                           </p>
                           <p className="text-sm text-muted-foreground">{workItems[0].period}</p>
@@ -131,18 +130,18 @@ const Timeline = () => {
 
               {/* Software Engineer */}
               <div className="relative animate-fade-in" style={{ animationDelay: '200ms' }}>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div></div>
-                  <div className="pl-8">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="hidden md:block"></div>
+                  <div className="md:pl-8 pl-16">
+                    <Card className="p-4 md:p-6 shadow-soft hover-lift border-0 bg-card">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary flex-shrink-0">
                           <WorkIcon2 className="h-6 w-6 text-primary-foreground" />
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-1">{workItems[1].title}</h3>
-                          <p className="text-lg text-primary font-semibold mb-1">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">{workItems[1].title}</h3>
+                          <p className="text-base md:text-lg text-primary font-semibold mb-1">
                             {workItems[1].institution}
                           </p>
                           <p className="text-sm text-muted-foreground">{workItems[1].period}</p>
@@ -165,49 +164,49 @@ const Timeline = () => {
 
               {/* Bachelor */}
               <div className="relative animate-fade-in" style={{ animationDelay: '300ms' }}>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-right pr-8">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
-                      <div className="flex items-start gap-4 mb-4 justify-end">
-                        <div className="flex-1 text-right">
-                          <h3 className="text-xl font-bold mb-1">{educationItems[1].title}</h3>
-                          <p className="text-lg text-primary font-semibold mb-1">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="md:text-right md:pr-8 pl-16 md:pl-0">
+                    <Card className="p-4 md:p-6 shadow-soft hover-lift border-0 bg-card md:inline-block w-full">
+                      <div className="flex md:flex-row-reverse items-start gap-4 mb-4 md:justify-end">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon2 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div className="flex-1 md:text-right">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">{educationItems[1].title}</h3>
+                          <p className="text-base md:text-lg text-primary font-semibold mb-1">
                             {educationItems[1].institution}
                           </p>
                           <p className="text-sm text-muted-foreground">{educationItems[1].period}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
-                          <EducationIcon2 className="h-6 w-6 text-primary-foreground" />
-                        </div>
                       </div>
                     </Card>
                   </div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
               </div>
 
               {/* Diploma */}
               <div className="relative animate-fade-in" style={{ animationDelay: '400ms' }}>
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="text-right pr-8">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
-                      <div className="flex items-start gap-4 mb-4 justify-end">
-                        <div className="flex-1 text-right">
-                          <h3 className="text-xl font-bold mb-1">{educationItems[2].title}</h3>
-                          <p className="text-lg text-primary font-semibold mb-1">
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                  <div className="md:text-right md:pr-8 pl-16 md:pl-0">
+                    <Card className="p-4 md:p-6 shadow-soft hover-lift border-0 bg-card md:inline-block w-full">
+                      <div className="flex md:flex-row-reverse items-start gap-4 mb-4 md:justify-end">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon3 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div className="flex-1 md:text-right">
+                          <h3 className="text-lg md:text-xl font-bold mb-1">{educationItems[2].title}</h3>
+                          <p className="text-base md:text-lg text-primary font-semibold mb-1">
                             {educationItems[2].institution}
                           </p>
                           <p className="text-sm text-muted-foreground">{educationItems[2].period}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
-                          <EducationIcon3 className="h-6 w-6 text-primary-foreground" />
-                        </div>
                       </div>
                     </Card>
                   </div>
-                  <div></div>
+                  <div className="hidden md:block"></div>
                 </div>
               </div>
             </div>
