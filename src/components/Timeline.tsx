@@ -12,17 +12,17 @@ const Timeline = () => {
     {
       title: "Master of Science in Computer Science",
       institution: "Binghamton University",
-      period: "2023 - 2024",
+      period: "2022 - 2024",
     },
     {
       title: "Bachelor of Engineering, Computer Engineering",
       institution: "Savitribai Phule Pune University",
-      period: "2015 - 2019",
+      period: "2016 - 2019",
     },
     {
       title: "Diploma, Information Technology",
       institution: "Maharashtra State Board of Technical Education",
-      period: "2012 - 2015",
+      period: "2013 - 2016",
     },
   ];
 

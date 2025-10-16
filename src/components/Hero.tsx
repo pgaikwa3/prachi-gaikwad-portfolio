@@ -16,17 +16,6 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 animate-slide-up">
-              <div className="glass-card px-5 py-2.5 rounded-full border-primary/20 shadow-glow">
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-                  <span className="text-sm font-semibold text-gradient">
-                    Welcome to my portfolio
-                  </span>
-                </div>
-              </div>
-            </div>
 
             {/* Main Heading */}
             <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
@@ -43,7 +32,7 @@ const Hero = () => {
             <div className="animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 flex items-center gap-3 flex-wrap">
                 <Zap className="w-7 h-7 text-accent" />
-                Software Engineer | Full-Stack Developer
+                Software Engineer
               </h2>
             </div>
 
