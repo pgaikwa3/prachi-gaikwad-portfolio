@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Sparkles, Code2, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Code2, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import profilePicture from "@/assets/profile-picture.jpg";
 
@@ -55,6 +55,11 @@ const Hero = () => {
               complex systems.
             </p>
 
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl animate-slide-up" style={{ animationDelay: '0.35s' }}>
+              Passionate about creating efficient, scalable solutions and continuously learning
+              new technologies to solve complex problems.
+            </p>
+
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <Button 
@@ -67,14 +72,6 @@ const Hero = () => {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="group border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:shadow-elegant transition-all duration-300 hover:scale-105"
-              >
-                <Download className="mr-2 h-5 w-5 group-hover:animate-pulse" /> 
-                Download CV
               </Button>
             </div>
           </div>

@@ -7,16 +7,19 @@ const Certifications = () => {
       icon: Award,
       title: "Data Analytics Certification",
       description: "Professional certification in data analytics and visualization",
+      link: "#",
     },
     {
       icon: Shield,
       title: "Secure Code Warrior",
       description: "Expertise in secure coding practices and application security",
+      link: "#",
     },
     {
       icon: BookOpen,
       title: "Research Paper Published",
       description: "Contributing to academic research in computer science",
+      link: "#",
     },
   ];
 
@@ -35,24 +38,31 @@ const Certifications = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <Card
+              <a
                 key={index}
-                className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <div className="flex flex-col items-center text-center">
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-secondary mb-4">
-                    <cert.icon className="h-8 w-8 text-primary-foreground" />
+                <Card
+                  className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in h-full transition-all duration-300 hover:shadow-glow"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex flex-col items-center text-center h-full">
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-secondary mb-4">
+                      <cert.icon className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                      {cert.description}
+                    </p>
+                    <div className="mt-4">
+                      <CheckCircle2 className="h-5 w-5 text-secondary" />
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {cert.description}
-                  </p>
-                  <div className="mt-4">
-                    <CheckCircle2 className="h-5 w-5 text-secondary" />
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </a>
             ))}
           </div>
         </div>

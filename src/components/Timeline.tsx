@@ -2,20 +2,35 @@ import { GraduationCap, Briefcase, CheckCircle2 } from "lucide-react";
 import { Card } from "./ui/card";
 
 const Timeline = () => {
-  const timelineItems = [
+  const EducationIcon1 = GraduationCap;
+  const EducationIcon2 = GraduationCap;
+  const EducationIcon3 = GraduationCap;
+  const WorkIcon1 = Briefcase;
+  const WorkIcon2 = Briefcase;
+
+  const educationItems = [
     {
-      type: "education",
       title: "Master of Science in Computer Science",
       institution: "Binghamton University",
       period: "2023 - 2024",
-      icon: GraduationCap,
     },
     {
-      type: "work",
+      title: "Bachelor of Engineering, Computer Engineering",
+      institution: "Savitribai Phule Pune University",
+      period: "2015 - 2019",
+    },
+    {
+      title: "Diploma, Information Technology",
+      institution: "Maharashtra State Board of Technical Education",
+      period: "2012 - 2015",
+    },
+  ];
+
+  const workItems = [
+    {
       title: "Graduate Student Assistant",
       institution: "Binghamton University",
       period: "Apr 2023 - Dec 2024",
-      icon: Briefcase,
       achievements: [
         "Optimized 15+ SQL queries, reducing response times from 30 to 6 seconds and boosting data access speed by 80%",
         "Implemented a secure API authentication system using JWT tokens to restrict unauthorized access",
@@ -24,11 +39,9 @@ const Timeline = () => {
       ],
     },
     {
-      type: "work",
       title: "Software Engineer",
       institution: "NETGEAR",
       period: "Aug 2019 - Aug 2022",
-      icon: Briefcase,
       achievements: [
         "Built 20+ responsive web pages using React.js, HTML, CSS, and JavaScript, leading to a 15% increase in user engagement",
         "Integrated REST APIs to dynamically fetch and display data, improving application functionality and user experience",
@@ -36,20 +49,6 @@ const Timeline = () => {
         "Implemented CI/CD pipelines using Jenkins, cutting deployment time by 50% and streamlining release cycles",
         "Collaborated in Agile teams, participating in sprint planning and code reviews to deliver high-quality software on time",
       ],
-    },
-    {
-      type: "education",
-      title: "Bachelor of Engineering, Computer Engineering",
-      institution: "Savitribai Phule Pune University",
-      period: "2015 - 2019",
-      icon: GraduationCap,
-    },
-    {
-      type: "education",
-      title: "Diploma, Information Technology",
-      institution: "Maharashtra State Board of Technical Education",
-      period: "2012 - 2015",
-      icon: GraduationCap,
     },
   ];
 
@@ -67,55 +66,150 @@ const Timeline = () => {
           </div>
 
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20" />
+            {/* Vertical center line */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/20" />
 
-            <div className="space-y-8">
-              {timelineItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="relative animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
-
-                  {/* Content card */}
-                  <div className="ml-20">
-                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className={`p-3 rounded-xl ${
-                          item.type === "education" 
-                            ? "bg-gradient-to-br from-primary to-primary/80" 
-                            : "bg-gradient-to-br from-primary to-secondary"
-                        }`}>
-                          <item.icon className="h-6 w-6 text-primary-foreground" />
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-1">{item.title}</h3>
+            <div className="space-y-12">
+              {/* Interleave education and work items chronologically */}
+              {/* Masters */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '0ms' }}>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-right pr-8">
+                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
+                      <div className="flex items-start gap-4 mb-4 justify-end">
+                        <div className="flex-1 text-right">
+                          <h3 className="text-xl font-bold mb-1">{educationItems[0].title}</h3>
                           <p className="text-lg text-primary font-semibold mb-1">
-                            {item.institution}
+                            {educationItems[0].institution}
                           </p>
-                          <p className="text-sm text-muted-foreground">{item.period}</p>
+                          <p className="text-sm text-muted-foreground">{educationItems[0].period}</p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon1 className="h-6 w-6 text-primary-foreground" />
                         </div>
                       </div>
+                    </Card>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
 
-                      {item.achievements && (
-                        <div className="space-y-2 mt-4">
-                          {item.achievements.map((achievement, i) => (
-                            <div key={i} className="flex items-start gap-3">
-                              <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
-                              <p className="text-sm text-muted-foreground leading-relaxed">
-                                {achievement}
-                              </p>
-                            </div>
-                          ))}
+              {/* Graduate Student Assistant */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '100ms' }}>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-2 gap-8">
+                  <div></div>
+                  <div className="pl-8">
+                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary">
+                          <WorkIcon1 className="h-6 w-6 text-primary-foreground" />
                         </div>
-                      )}
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold mb-1">{workItems[0].title}</h3>
+                          <p className="text-lg text-primary font-semibold mb-1">
+                            {workItems[0].institution}
+                          </p>
+                          <p className="text-sm text-muted-foreground">{workItems[0].period}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2 mt-4">
+                        {workItems[0].achievements.map((achievement, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {achievement}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </Card>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Software Engineer */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '200ms' }}>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-2 gap-8">
+                  <div></div>
+                  <div className="pl-8">
+                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-secondary">
+                          <WorkIcon2 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold mb-1">{workItems[1].title}</h3>
+                          <p className="text-lg text-primary font-semibold mb-1">
+                            {workItems[1].institution}
+                          </p>
+                          <p className="text-sm text-muted-foreground">{workItems[1].period}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2 mt-4">
+                        {workItems[1].achievements.map((achievement, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {achievement}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bachelor */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '300ms' }}>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-right pr-8">
+                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
+                      <div className="flex items-start gap-4 mb-4 justify-end">
+                        <div className="flex-1 text-right">
+                          <h3 className="text-xl font-bold mb-1">{educationItems[1].title}</h3>
+                          <p className="text-lg text-primary font-semibold mb-1">
+                            {educationItems[1].institution}
+                          </p>
+                          <p className="text-sm text-muted-foreground">{educationItems[1].period}</p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon2 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+
+              {/* Diploma */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '400ms' }}>
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-primary to-secondary ring-4 ring-background z-10" />
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="text-right pr-8">
+                    <Card className="p-6 shadow-soft hover-lift border-0 bg-card inline-block w-full">
+                      <div className="flex items-start gap-4 mb-4 justify-end">
+                        <div className="flex-1 text-right">
+                          <h3 className="text-xl font-bold mb-1">{educationItems[2].title}</h3>
+                          <p className="text-lg text-primary font-semibold mb-1">
+                            {educationItems[2].institution}
+                          </p>
+                          <p className="text-sm text-muted-foreground">{educationItems[2].period}</p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-primary to-primary/80">
+                          <EducationIcon3 className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
