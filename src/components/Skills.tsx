@@ -106,7 +106,7 @@ const Skills = () => {
             <p className="text-lg text-muted-foreground">Full-stack development and Data-analytics expertise</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:justify-items-center max-w-5xl mx-auto">
             {skillCategories.map((category, index) => <Card key={index} className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in group w-full max-w-sm" style={{
             animationDelay: `${index * 100}ms`
           }}>
