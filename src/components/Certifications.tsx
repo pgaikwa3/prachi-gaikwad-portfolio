@@ -9,18 +9,21 @@ const Certifications = () => {
       title: "Data Analytics Certification",
       description: "Professional certification in data analytics and visualization",
       link: "#",
+      buttonText: "View Certificate",
     },
     {
       icon: Shield,
       title: "Secure Code Warrior",
       description: "Expertise in secure coding practices and application security",
       link: "#",
+      buttonText: "View Certificate",
     },
     {
       icon: BookOpen,
       title: "Research Paper Published",
       description: "Contributing to academic research in computer science",
       link: "#",
+      buttonText: "View Publication",
     },
   ];
 
@@ -63,7 +66,7 @@ const Certifications = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      View Certificate
+                      {cert.buttonText}
                       <ExternalLink className="h-4 w-4" />
                     </a>
                   </Button>
