@@ -1,4 +1,4 @@
-import { Award, Shield, BookOpen, ExternalLink } from "lucide-react";
+import { Award, Shield, BookOpen, ExternalLink, Container } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -24,6 +24,13 @@ const Certifications = () => {
       description: "Contributing to academic research in computer science",
       link: "#",
       buttonText: "View Publication",
+    },
+    {
+      icon: Container,
+      title: "Docker Certification",
+      description: "Expertise in containerization and Docker technologies",
+      link: "#",
+      buttonText: "View Certificate",
     },
   ];
 
