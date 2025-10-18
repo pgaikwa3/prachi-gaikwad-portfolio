@@ -19,18 +19,18 @@ const Certifications = () => {
       buttonText: "View Certificate",
     },
     {
-      icon: BookOpen,
-      title: "Research Paper Published",
-      description: "Contributing to academic research in computer science",
-      link: "#",
-      buttonText: "View Publication",
-    },
-    {
       icon: Container,
       title: "Docker Certification",
       description: "Expertise in containerization and Docker technologies",
       link: "#",
       buttonText: "View Certificate",
+    },
+    {
+      icon: BookOpen,
+      title: "Research Paper Published",
+      description: "Contributing to academic research in computer science",
+      link: "#",
+      buttonText: "View Publication",
     },
   ];
 
