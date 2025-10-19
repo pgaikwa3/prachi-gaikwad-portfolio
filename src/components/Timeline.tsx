@@ -116,7 +116,7 @@ const Timeline = () => {
                       <div className="space-y-2 mt-4">
                         {workItems[0].achievements.map((achievement, i) => (
                           <div key={i} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {achievement}
                             </p>
@@ -150,7 +150,7 @@ const Timeline = () => {
                       <div className="space-y-2 mt-4">
                         {workItems[1].achievements.map((achievement, i) => (
                           <div key={i} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                             <p className="text-sm text-muted-foreground leading-relaxed">
                               {achievement}
                             </p>
