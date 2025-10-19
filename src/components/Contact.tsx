@@ -17,20 +17,18 @@ const EMAILJS_TEMPLATE_ID = "template_e5ulhm4";
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
+  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters")
 });
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form data
     try {
       contactSchema.parse(formData);
@@ -40,23 +38,19 @@ const Contact = () => {
         return;
       }
     }
-
     setIsSubmitting(true);
-
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        EMAILJS_PUBLIC_KEY
-      );
-
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message
+      }, EMAILJS_PUBLIC_KEY);
       toast.success("Message sent! I'll get back to you soon.");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
     } catch (error) {
       console.error("EmailJS Error:", error);
       toast.error("Failed to send message. Please try again later.");
@@ -64,43 +58,36 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "pgaikwa3@binghamton.edu",
-      link: "mailto:pgaikwa3@binghamton.edu",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "Connect on LinkedIn",
-      link: "https://www.linkedin.com/in/prachi-gaikwad/",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "View GitHub Profile",
-      link: "https://github.com/PrachiGaikwad1/",
-    },
-  ];
-
-  return (
-    <section id="contact" className="py-20">
+  const contactInfo = [{
+    icon: Mail,
+    label: "Email",
+    value: "pgaikwa3@binghamton.edu",
+    link: "mailto:pgaikwa3@binghamton.edu"
+  }, {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "Connect on LinkedIn",
+    link: "https://www.linkedin.com/in/prachi-gaikwad/"
+  }, {
+    icon: Github,
+    label: "GitHub",
+    value: "View GitHub Profile",
+    link: "https://github.com/PrachiGaikwad1/"
+  }];
+  return <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Get In <span className="text-gradient">Touch</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Let's discuss how I can help with your next project
-            </p>
+            
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -114,18 +101,10 @@ const Contact = () => {
                 </p>
               </div>
 
-              {contactInfo.map((info, index) => (
-                <Card
-                  key={index}
-                  className="p-5 shadow-soft hover-lift border-0 bg-card"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <a
-                    href={info.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 group"
-                  >
+              {contactInfo.map((info, index) => <Card key={index} className="p-5 shadow-soft hover-lift border-0 bg-card" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
+                  <a href={info.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                     <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary transition-all">
                       <info.icon className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
@@ -136,8 +115,7 @@ const Contact = () => {
                       </p>
                     </div>
                   </a>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Contact Form */}
@@ -147,56 +125,24 @@ const Contact = () => {
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Your Name
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your name"
-                    className="border-border focus:border-primary"
-                  />
+                  <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} required placeholder="Your name" className="border-border focus:border-primary" />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Your Email
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your email"
-                    className="border-border focus:border-primary"
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="Your email" className="border-border focus:border-primary" />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Your Message
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    placeholder="Your message"
-                    rows={5}
-                    className="border-border focus:border-primary resize-none"
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Your message" rows={5} className="border-border focus:border-primary resize-none" />
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 shadow-elegant"
-                  size="lg"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 shadow-elegant" size="lg" disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"} 
                   <Send className="ml-2 h-5 w-5" />
                 </Button>
@@ -205,8 +151,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
