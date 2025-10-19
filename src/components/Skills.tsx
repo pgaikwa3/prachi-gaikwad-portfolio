@@ -106,8 +106,8 @@ const Skills = () => {
             <p className="text-lg text-muted-foreground">Full-stack development and Data-analytics expertise</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:justify-items-center max-w-5xl mx-auto">
-            {skillCategories.map((category, index) => <Card key={index} className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in group w-full max-w-sm" style={{
+          <div className="grid md:grid-cols-5 gap-6">
+            {skillCategories.map((category, index) => <Card key={index} className="p-6 shadow-soft hover-lift border-0 bg-card animate-fade-in group w-full" style={{
             animationDelay: `${index * 100}ms`
           }}>
                 <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${category.color} mb-4 group-hover:scale-110 transition-transform`}>
