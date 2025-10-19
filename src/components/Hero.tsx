@@ -76,12 +76,12 @@ const Hero = () => {
               {/* Main Profile Container */}
               <div className="relative group">
                 {/* Gradient Border Effect */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary via-secondary to-accent rounded-3xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></div>
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary via-secondary to-accent rounded-full opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></div>
                 
                 {/* Profile Image Container */}
-                <div className="relative overflow-hidden rounded-3xl bg-card">
-                  <div className="aspect-square max-w-[240px] mx-auto skewed-frame bg-gradient-to-br from-primary to-secondary p-1.5">
-                    <div className="w-full h-full bg-card rounded-3xl overflow-hidden">
+                <div className="relative overflow-hidden rounded-full bg-card">
+                  <div className="aspect-square max-w-[240px] mx-auto bg-gradient-to-br from-primary to-secondary p-1.5 rounded-full">
+                    <div className="w-full h-full bg-card rounded-full overflow-hidden">
                       <img 
                         src={profilePicture} 
                         alt="Prachi Gaikwad - Software Engineer" 
@@ -91,7 +91,7 @@ const Hero = () => {
                   </div>
                   
                   {/* Glass Overlay on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
                 </div>
               </div>
 
