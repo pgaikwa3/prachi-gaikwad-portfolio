@@ -28,7 +28,7 @@ const Timeline = () => {
 
   const workItems = [
     {
-      title: "Graduate Student Assistant",
+      title: "Graduate Student Assistant - Developer",
       institution: "Binghamton University",
       period: "Apr 2023 - Dec 2024",
       achievements: [
