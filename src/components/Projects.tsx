@@ -105,30 +105,17 @@ const Projects = () => {
                     )}
                   </div>
 
-                  <div className="flex gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      asChild
-                    >
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1"
-                      asChild
-                    >
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  </div>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                    asChild
+                  >
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Check here
+                    </a>
+                  </Button>
                 </div>
               </Card>
             ))}
