@@ -17,7 +17,7 @@ const Projects = () => {
       githubLink: "https://github.com/PrachiGaikwad1/Tableau-Dashboards",
     },
     {
-      title: "PowerBI Dashboards Collection",
+      title: "Power BI Dashboard - Amazon prime shows analysis",
       description:
         "Collection of professional PowerBI dashboards showcasing data analysis and business intelligence capabilities with interactive visualizations and actionable insights.",
       technologies: ["PowerBI", "Business Intelligence", "Data Analysis"],
