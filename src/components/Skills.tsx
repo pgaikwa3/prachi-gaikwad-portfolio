@@ -79,7 +79,7 @@ const Skills = () => {
     category: "DevOps & Tools",
     icon: GitBranch,
     skills: [{
-      name: "AWS",
+      name: "Google Cloud Platform",
       logo: "☁️"
     }, {
       name: "CI/CD",
