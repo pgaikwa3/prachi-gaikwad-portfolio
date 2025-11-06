@@ -52,6 +52,15 @@ const Projects = () => {
       liveLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
       githubLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
     },
+    {
+      title: "Tableau Dashboard - Emergency Room Visits",
+      description:
+        "Interactive Tableau dashboard analyzing emergency room visits with comprehensive visualizations for patient flow, wait times, admission patterns, and resource utilization metrics.",
+      technologies: ["Tableau", "Data Visualization", "Healthcare Analytics"],
+      image: projectTrends,
+      liveLink: "#",
+      githubLink: "#",
+    },
   ];
 
   return (

@@ -1,4 +1,4 @@
-import { Award, Shield, BookOpen, ExternalLink, Container } from "lucide-react";
+import { Award, Database, BookOpen, ExternalLink, Container } from "lucide-react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 
@@ -12,9 +12,9 @@ const Certifications = () => {
       buttonText: "View Certificate",
     },
     {
-      icon: Shield,
-      title: "Secure Code Warrior",
-      description: "Expertise in secure coding practices and application security",
+      icon: Database,
+      title: "SQL Certification",
+      description: "Expertise in database management and SQL query optimization",
       link: "#",
       buttonText: "View Certificate",
     },
