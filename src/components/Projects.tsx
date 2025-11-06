@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Identifying Trends in Programming Languages, Frameworks & Technologies",
       description:
         "Developed a comprehensive data analytics platform to identify and visualize trends in programming languages and frameworks. Features interactive dashboards, real-time data processing, and predictive analytics.",
-      technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript", "PostgreSQL"],
+      technologies: ["Python", "Flask", "JavaScript & SQL"],
       image: projectTrends,
       liveLink: "https://github.com/PrachiGaikwad1/Data-Science-Projects/tree/main/identifying-trends-in-programming-languages-frameworks-and-technologies",
       githubLink: "https://github.com/PrachiGaikwad1/Data-Science-Projects/tree/main/identifying-trends-in-programming-languages-frameworks-and-technologies",
@@ -38,7 +38,7 @@ const Projects = () => {
       title: "Multithreaded Communication Application",
       description:
         "Built a robust client-server communication system using Java multi-threading. Implements concurrent request handling, thread pooling, and efficient resource management for high-performance networking.",
-      technologies: ["Java", "Multi-threading", "Socket Programming", "Concurrency"],
+      technologies: ["Java", "Multi-threading", "Socket Programming"],
       image: projectCommunication,
       liveLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/multithreaded-communication-application",
       githubLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/multithreaded-communication-application",
@@ -47,7 +47,7 @@ const Projects = () => {
       title: "Backup System Application using Observer Pattern",
       description:
         "Designed and implemented an automated backup system using the Observer design pattern. Features real-time file monitoring, incremental backups, and efficient synchronization with comprehensive logging.",
-      technologies: ["Java", "Design Patterns", "Ant", "File I/O"],
+      technologies: ["Java", "Design Patterns", "Ant"],
       image: projectBackup,
       liveLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
       githubLink: "https://github.com/PrachiGaikwad1/Java-Projects/tree/main/correct-backup-system-application-using-observer-pattern",
@@ -56,7 +56,7 @@ const Projects = () => {
       title: "Tableau Dashboard - Emergency Room Visits",
       description:
         "Interactive Tableau dashboard analyzing emergency room visits with comprehensive visualizations for patient flow, wait times, admission patterns, and resource utilization metrics.",
-      technologies: ["Tableau", "Data Visualization", "Healthcare Analytics"],
+      technologies: ["Tableau", "Data Visualization", "Healthcare"],
       image: projectTrends,
       liveLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/ER_Visits_Dashboard/Dashboard1",
       githubLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/ER_Visits_Dashboard/Dashboard1",

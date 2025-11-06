@@ -103,7 +103,7 @@ const Skills = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Technical <span className="text-gradient">Skills</span>
             </h2>
-            <p className="text-lg text-muted-foreground">Full-stack development and Data-analytics expertise</p>
+            <p className="text-lg text-muted-foreground">Development and Data-analytics skills</p>
           </div>
 
           <div className="grid md:grid-cols-5 gap-6">
