@@ -4,14 +4,13 @@ import { Card } from "./ui/card";
 const Experience = () => {
   const experiences = [
     {
-      title: "Graduate Student Assistant",
-      company: "Binghamton University",
+      title: "Graduate Student Assistant - Developer",
+      company: "Binghamton University, New York",
       period: "Apr 2023 - Dec 2024",
       achievements: [
-        "Optimized 15+ SQL queries, reducing response times from 30 to 6 seconds and boosting data access speed by 80%",
-        "Implemented a secure API authentication system using JWT tokens to restrict unauthorized access",
-        "Developed backend solutions using Python and Node.js to streamline workflows, improving efficiency by 25%",
-        "Migrated legacy applications to AWS, enhancing system reliability and scalability while reducing deployment time by 40%",
+        "Developed and maintained end-to-end web application - University Portal using HTML, CSS, ReactJS, JavaScript, and SQL, improving data access speed by 25%.",
+        "Created data dashboards and visual reports using Tableau and SQL to analyze student engagement, course registration, and support ticket metrics, enabling data-driven decision-making.",
+        "Implemented an AI-powered chatbot integrated with the university portal for student support to handle FAQs on class schedules, tests, and assignments, improving accessibility and reducing administrative workload.",
       ],
     },
     {
@@ -19,11 +18,13 @@ const Experience = () => {
       company: "NETGEAR",
       period: "Aug 2019 - Aug 2022",
       achievements: [
-        "Built 20+ responsive web pages using React.js, HTML, CSS, and JavaScript, leading to a 15% increase in user engagement",
-        "Integrated REST APIs to dynamically fetch and display data, improving application functionality and user experience",
-        "Conducted unit testing with Jest and JUnit, reducing post-release bugs by 30% and ensuring code quality",
-        "Implemented CI/CD pipelines using Jenkins, cutting deployment time by 50% and streamlining release cycles",
-        "Collaborated in Agile teams, participating in sprint planning and code reviews to deliver high-quality software on time",
+        "Conducted data analysis and created visual dashboards using Python, Tableau, Power BI and SQL, providing insights into system metrics, order trends, and performance KPIs for management teams.",
+        "Performed SQL query tuning and database optimization using EXPLAIN PLAN to enhance report generation speed and backend data performance by 25%.",
+        "Built data pipelines and automated ETL workflows using Apache Airflow, enabling efficient data extraction, transformation, and loading for analytics and reporting.",
+        "Collaborated with cross-functional teams to integrate analytical components and ensure data consistency across systems, aligning engineering outputs with business intelligence needs.",
+        "Developed and optimized end-to-end Java-based backend solutions using Spring Boot, JavaEE, Oracle DB, and REST APIs, improving integration accuracy and data exchange across enterprise partners such as Amazon, Walmart, and Best Buy.",
+        "Modernized legacy systems by migrating from Java 6 to OpenJDK 11 and improving processing performance through code refactoring and CI/CD automation.",
+        "Implemented DevOps automation using Jenkins, Docker, and Ansible for build orchestration, containerized deployments, and server configuration management, improving release reliability and deployment efficiency.",
       ],
     },
   ];

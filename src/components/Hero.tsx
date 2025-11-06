@@ -38,15 +38,10 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              I am a software engineer with a Master's in Computer Science and over three years
-              of experience building scalable web applications and supporting technical operations.
-              I specialize in full-stack development, database management, and troubleshooting
-              complex systems.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl animate-slide-up" style={{ animationDelay: '0.35s' }}>
-              Passionate about creating efficient, scalable solutions and continuously learning
-              new technologies to solve complex problems.
+              I am a software engineer with a Master's in Computer Science and over three years of 
+              experience building scalable data-driven applications and supporting technical operations. 
+              I specialize in application development, database design, data analysis, and visualization 
+              to deliver actionable business insights.
             </p>
 
             {/* CTA Buttons */}
