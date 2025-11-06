@@ -22,8 +22,8 @@ const Projects = () => {
         "Collection of professional PowerBI dashboards showcasing data analysis and business intelligence capabilities with interactive visualizations and actionable insights.",
       technologies: ["PowerBI", "Business Intelligence", "Data Analysis"],
       image: projectCommunication,
-      liveLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards",
-      githubLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards",
+      liveLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards/tree/main/power-bi-amazon-shows-dashboard",
+      githubLink: "https://github.com/PrachiGaikwad1/PowerBI-Dashboards/tree/main/power-bi-amazon-shows-dashboard",
     },
     {
       title: "Identifying Trends in Programming Languages, Frameworks & Technologies",
@@ -58,8 +58,8 @@ const Projects = () => {
         "Interactive Tableau dashboard analyzing emergency room visits with comprehensive visualizations for patient flow, wait times, admission patterns, and resource utilization metrics.",
       technologies: ["Tableau", "Data Visualization", "Healthcare Analytics"],
       image: projectTrends,
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/ER_Visits_Dashboard/Dashboard1",
+      githubLink: "https://public.tableau.com/app/profile/prachi.gaikwad3617/viz/ER_Visits_Dashboard/Dashboard1",
     },
   ];
 
