@@ -80,11 +80,11 @@ const Hero = () => {
               {/* Main Profile Container */}
               <div className="relative group">
                 {/* Gradient Border Effect */}
-              <div className="absolute -inset-1 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-br from-primary via-secondary to-accent rounded-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 animate-glow"></div>
                 
                 {/* Profile Image Container */}
                 <div className="relative overflow-hidden rounded-2xl bg-card">
-                  <div className="aspect-square max-w-[240px] mx-auto bg-gradient-to-br from-primary to-secondary p-1.5 rounded-2xl">
+                  <div className="aspect-square max-w-[200px] mx-auto bg-gradient-to-br from-primary to-secondary p-0.5 rounded-2xl">
                     <div className="w-full h-full bg-card rounded-2xl overflow-hidden">
                       <img src={profilePicture} alt="Prachi Gaikwad - Software Engineer" className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500" />
                     </div>
