@@ -38,14 +38,14 @@ const Hero = () => {
           }}>
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 flex items-center gap-3 flex-wrap">
                 <Zap className="w-7 h-7 text-accent" />
-                Software Engineer
+                Developer
               </h2>
             </div>
 
             {/* Description */}
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl animate-slide-up" style={{
             animationDelay: '0.3s'
-          }}>I am a software engineer with a Master's in Computer Science and over three years of experience building scalable data-driven applications and supporting technical operations. I specialize in application development, database design, data analysis, and visualization to deliver actionable business insights.</p>
+          }}>I am a Developer with a Master's in Computer Science and over three years of experience building scalable data-driven applications and supporting technical operations. I specialize in application development, database design, data analysis, and visualization to deliver actionable business insights.</p>
 
             
 
