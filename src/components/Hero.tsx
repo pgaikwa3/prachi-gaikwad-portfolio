@@ -26,7 +26,7 @@ const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
                 Hello, I'm <br />
                 <span className="text-gradient inline-flex items-center gap-3">
-                  Prachi Gaikwad
+                  Prachi
                   <Code2 className="w-12 h-12 md:w-16 md:h-16 text-primary animate-glow" />
                 </span>
               </h1>

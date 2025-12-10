@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center">
           <p className="text-muted-foreground">
-            <span className="font-semibold text-primary">Prachi Gaikwad</span>
+            <span className="font-semibold text-primary">Prachi</span>
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             © {currentYear} All rights reserved.
