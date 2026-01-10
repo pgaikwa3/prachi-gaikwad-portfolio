@@ -30,7 +30,7 @@ const Timeline = () => {
       {
       title: "Research And Development Engineer",
       institution: "Binghamton University, NY",
-      period: "Feb 2025 - Nov 2025",
+      period: "Feb 2025 - Dec 2025",
       achievements: [
         "Developed recommendation models using Python to predict department-wise enrollment trends and built interactive dashboards for real-time monitoring, enabling faculty to adjust course capacity and scheduling more efficiently.",
         "Built automated ETL workflows using Dagster to collect, clean, transform, and load daily enrollment and registration datasets, ensuring accurate, up-to-date inputs for the dashboards and reducing manual reporting time by 60%.",

@@ -1,7 +1,42 @@
 import { Code2, Database, Server, GitBranch, BarChart3 } from "lucide-react";
 import { Card } from "./ui/card";
 const Skills = () => {
-  const skillCategories = [{
+  const skillCategories = [
+     {
+    category: "Data Analytics",
+    icon: BarChart3,
+    skills: [{
+      name: "Tableau",
+      logo: "📊"
+    }, {
+      name: "PowerBI",
+      logo: "📈"
+    }, {
+      name: "Excel",
+      logo: "📗"
+    }, {
+      name: "ETL",
+      logo: "🔄"
+    }],
+    color: "from-accent/80 to-secondary/80"
+  }, {
+    category: "Database Management",
+    icon: Database,
+    skills: [{
+      name: "MySQL",
+      logo: "🐬"
+    }, {
+      name: "PostgreSQL",
+      logo: "🐘"
+    }, {
+      name: "SQL Optimization",
+      logo: "⚡"
+    }, {
+      name: "Data Modeling",
+      logo: "📐"
+    }],
+    color: "from-accent to-accent/80"
+  }, {
     category: "Frontend Development",
     icon: Code2,
     skills: [{
@@ -41,61 +76,37 @@ const Skills = () => {
       logo: "🌶️"
     }],
     color: "from-secondary to-secondary/80"
-  }, {
-    category: "Data Analytics",
-    icon: BarChart3,
-    skills: [{
-      name: "Tableau",
-      logo: "📊"
-    }, {
-      name: "PowerBI",
-      logo: "📈"
-    }, {
-      name: "Excel",
-      logo: "📗"
-    }, {
-      name: "ETL",
-      logo: "🔄"
-    }],
-    color: "from-accent/80 to-secondary/80"
-  }, {
-    category: "Database Management",
-    icon: Database,
-    skills: [{
-      name: "MySQL",
-      logo: "🐬"
-    }, {
-      name: "PostgreSQL",
-      logo: "🐘"
-    }, {
-      name: "SQL Optimization",
-      logo: "⚡"
-    }, {
-      name: "Data Modeling",
-      logo: "📐"
-    }],
-    color: "from-accent to-accent/80"
-  }, {
-    category: "DevOps & Tools",
-    icon: GitBranch,
-    skills: [{
+  },{
+  category: "DevOps & Tools",
+  icon: GitBranch,
+  skills: [
+    {
+      name: "Jira/Confluence",
+      logo: "📋"
+    },
+    {
       name: "Google Cloud Platform",
       logo: "☁️"
-    }, {
+    },
+    {
       name: "CI/CD",
       logo: "🔁"
-    }, {
+    },
+    {
       name: "Jenkins",
       logo: "🤖"
-    }, {
+    },
+    {
       name: "Git",
       logo: "🔀"
-    }, {
+    },
+    {
       name: "Agile/Scrum",
       logo: "🏃"
-    }],
-    color: "from-primary/80 to-secondary"
-  }];
+    }
+  ],
+  color: "from-primary/80 to-secondary"
+}];
   return <section id="skills" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
